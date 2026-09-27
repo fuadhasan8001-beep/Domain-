@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services - F Hasan Production</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#dae2fd",
+                        "surface": "#0b1326",
+                        "surface-container-lowest": "#060e20",
+                        "secondary-container": "#6f00be",
+                        "surface-variant": "#2d3449",
+                        "on-tertiary-container": "#004ecf",
+                        "surface-container": "#171f33",
+                        "on-secondary": "#490080",
+                        "on-surface": "#dae2fd",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-fixed": "#00174b",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "outline-variant": "#3b494c",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#31394d",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "surface-container-high": "#222a3d",
+                        "inverse-primary": "#006875",
+                        "on-tertiary": "#002a78",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-dim": "#0b1326",
+                        "background": "#0b1326",
+                        "on-primary-fixed-variant": "#004f58",
+                        "on-primary-container": "#00626e",
+                        "inverse-surface": "#dae2fd",
+                        "on-surface-variant": "#bac9cc",
+                        "on-secondary-fixed": "#2c0051",
+                        "surface-tint": "#00daf3",
+                        "tertiary": "#e9ecff",
+                        "inverse-on-surface": "#283044",
+                        "on-error": "#690005",
+                        "outline": "#849396",
+                        "secondary-fixed": "#f0dbff",
+                        "secondary": "#ddb7ff",
+                        "on-primary": "#00363d",
+                        "tertiary-container": "#c2cfff",
+                        "error-container": "#93000a",
+                        "primary": "#c3f5ff",
+                        "primary-container": "#00e5ff",
+                        "on-secondary-container": "#d6a9ff",
+                        "on-primary-fixed": "#001f24",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed": "#9cf0ff",
+                        "on-tertiary-fixed-variant": "#003ea8",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#00daf3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            text-shadow: 0 0 10px rgba(0, 218, 243, 0.5), 0 0 20px rgba(0, 218, 243, 0.3);
+        }
+        .bg-glow-blob {
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            border-radius: 50%;
+            filter: blur(100px);
+            opacity: 0.15;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .bg-glow-cyan { background: #00daf3; top: -20%; left: -10%; }
+        .bg-glow-purple { background: #6f00be; bottom: -20%; right: -10%; }
+        .bg-glow-blue { background: #004ecf; top: 40%; left: 30%; }
+
+        .gradient-text {
+            background: linear-gradient(90deg, #c3f5ff, #ddb7ff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .gradient-btn {
+            background: linear-gradient(135deg, #6f00be, #00daf3);
+            transition: all 0.3s ease;
+        }
+        .gradient-btn:hover {
+            box-shadow: 0 0 20px rgba(0, 218, 243, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Checkmark icon styles */
+        .check-icon {
+            font-variation-settings: 'FILL' 1;
+            color: #00daf3;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen overflow-x-hidden relative font-sans">
+<!-- Background Glows -->
+<div class="fixed inset-0 overflow-hidden pointer-events-none z-0">
+<div class="bg-glow-blob bg-glow-cyan"></div>
+<div class="bg-glow-purple bg-glow-blob"></div>
+<div class="bg-glow-blue bg-glow-blob"></div>
+</div>
+<!-- TopNavBar Component -->
+<nav class="fixed top-0 w-full z-50 bg-surface/10 backdrop-blur-xl border-b border-white/10 shadow-[0_0_20px_rgba(0,218,243,0.1)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-extrabold text-primary tracking-tighter cursor-pointer scale-95 active:scale-90 transition-transform">
+                F Hasan Production
+            </div>
+<div class="hidden md:flex items-center gap-6">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] transition-all px-3 py-1 rounded-full" href="index.html">Home</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-body-lg text-body-lg" href="layanan.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] transition-all px-3 py-1 rounded-full" href="portfolio.html">Portfolio</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] transition-all px-3 py-1 rounded-full" href="harga.html">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] transition-all px-3 py-1 rounded-full" href="tentang.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] transition-all px-3 py-1 rounded-full" href="kontak.html">Contact</a>
+</div>
+<button class="hidden md:block gradient-btn text-white font-bold py-2 px-6 rounded-full text-label-md">
+                Konsultasi Gratis
+            </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-[32px]">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="relative z-10 pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<!-- Header Section -->
+<header class="text-center mb-16">
+<h1 class="font-display-lg text-display-lg md:text-[56px] text-headline-lg-mobile gradient-text mb-4">Layanan Kami</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Solusi Digital, IT Support &amp; Creative Production dalam Satu Tempat.
+            </p>
+</header>
+<!-- Services Grid (Bento/Glassmorphic Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- 1. Computer Service -->
+<div class="glass-card rounded-xl p-6 flex flex-col h-full border-t-4 border-t-[#0078D7]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-[#0078D7]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#0078D7] text-3xl">computer</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-white">COMPUTER<br/>SERVICE</h2>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Install Ulang Windows</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Install Ubuntu / Linux</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Install Microsoft Office</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Install Software</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Install Driver</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Upgrade SSD &amp; RAM</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Pembersihan Virus</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Maintenance Komputer</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Backup &amp; Restore Data</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Setting Printer &amp; Jaringan</span>
+</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-[#25D366]/10 border border-[#25D366] text-[#25D366] font-label-md text-label-md hover:bg-[#25D366] hover:text-white transition-colors flex items-center justify-center gap-2 mt-auto">
+<span class="material-symbols-outlined">forum</span>
+                    Pesan Sekarang
+                </button>
+</div>
+<!-- 2. Website Development -->
+<div class="glass-card rounded-xl p-6 flex flex-col h-full border-t-4 border-t-[#00BFA5]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-[#00BFA5]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#00BFA5] text-3xl">language</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-white">WEBSITE<br/>DEVELOPMENT</h2>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Landing Page</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Company Profile</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Website UMKM</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Website Sekolah</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Domain &amp; Hosting</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">Maintenance Website</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm">check_circle</span>
+<span class="font-body-md text-body-md">SEO Dasar</span>
+</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-[#25D366]/10 border border-[#25D366] text-[#25D366] font-label-md text-label-md hover:bg-[#25D366] hover:text-white transition-colors flex items-center justify-center gap-2 mt-auto">
+<span class="material-symbols-outlined">forum</span>
+                    Pesan Sekarang
+                </button>
+</div>
+<!-- 3. Creative Design -->
+<div class="glass-card rounded-xl p-6 flex flex-col h-full border-t-4 border-t-[#FF9100]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-[#FF9100]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#FF9100] text-3xl">brush</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-white">CREATIVE<br/>DESIGN</h2>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Desain Logo</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Banner</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Brosur</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Poster</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Feed Instagram</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Thumbnail YouTube</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Branding Bisnis</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Kartu Nama</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#FF9100]">check_circle</span>
+<span class="font-body-md text-body-md">Desain UI/UX</span>
+</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-[#25D366]/10 border border-[#25D366] text-[#25D366] font-label-md text-label-md hover:bg-[#25D366] hover:text-white transition-colors flex items-center justify-center gap-2 mt-auto">
+<span class="material-symbols-outlined">forum</span>
+                    Pesan Sekarang
+                </button>
+</div>
+<!-- 4. Live Streaming & Multimedia -->
+<div class="glass-card rounded-xl p-6 flex flex-col h-full border-t-4 border-t-[#E91E63]">
+<div class="flex items-center gap-4 mb-6">
+<div class="w-12 h-12 rounded-full bg-[#E91E63]/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-[#E91E63] text-3xl">videocam</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-white">LIVE STREAMING<br/>&amp; MULTIMEDIA</h2>
+</div>
+<ul class="space-y-3 mb-8 flex-grow">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Setup OBS Studio</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Setup vMix</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Setup Resolume Arena</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Hybrid Meeting</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Zoom Webinar</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">YouTube Live</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Facebook Live</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Multi Camera</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">LED Display</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Audio Mixer</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Overlay &amp; Lower Third</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Podcast Setup</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined check-icon mt-1 text-sm text-[#E91E63]">check_circle</span>
+<span class="font-body-md text-body-md">Event Live Streaming</span>
+</li>
+</ul>
+<button class="w-full py-3 rounded-lg bg-[#25D366]/10 border border-[#25D366] text-[#25D366] font-label-md text-label-md hover:bg-[#25D366] hover:text-white transition-colors flex items-center justify-center gap-2 mt-auto">
+<span class="material-symbols-outlined">forum</span>
+                    Pesan Sekarang
+                </button>
+</div>
+</div>
+</main>
+<!-- Footer Component -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-white/5">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="flex flex-col gap-4">
+<span class="font-headline-md text-headline-md text-primary">F Hasan Production</span>
+<p class="font-body-md text-body-md text-on-surface-variant">
+                    © 2024 F Hasan Production. All rights reserved.
+                </p>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary font-bold">Contact</span>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline" href="mailto:cukakamu55@gmail.com">Email: cukakamu55@gmail.com</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline" href="mailto:cukakamu55@gmail.com">Email: cukakamu55@gmail.com</a>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary font-bold">Location &amp; Hours</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Address: Jl. Contoh Alamat No. 123</span>
+<span class="font-body-md text-body-md text-on-surface-variant">Hours: Mon-Sat 08:00-20:00</span>
+</div>
+<div class="flex flex-col gap-2">
+<span class="font-label-md text-label-md text-primary font-bold">Quick Links</span>
+<a class="font-body-md text-body-md text-primary font-bold underline-offset-4 hover:underline hover:text-primary transition-colors" href="layanan.html">Services</a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline" href="portfolio.html">Portfolio</a>
+</div>
+</div>
+</footer>
+<script src="script.js"></script>
+</body></html>

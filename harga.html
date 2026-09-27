@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Pricing - F Hasan Production</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#dae2fd",
+                        "surface": "#0b1326",
+                        "surface-container-lowest": "#060e20",
+                        "secondary-container": "#6f00be",
+                        "surface-variant": "#2d3449",
+                        "on-tertiary-container": "#004ecf",
+                        "surface-container": "#171f33",
+                        "on-secondary": "#490080",
+                        "on-surface": "#dae2fd",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-fixed": "#00174b",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "outline-variant": "#3b494c",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#31394d",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "surface-container-high": "#222a3d",
+                        "inverse-primary": "#006875",
+                        "on-tertiary": "#002a78",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-dim": "#0b1326",
+                        "background": "#0b1326",
+                        "on-primary-fixed-variant": "#004f58",
+                        "on-primary-container": "#00626e",
+                        "inverse-surface": "#dae2fd",
+                        "on-surface-variant": "#bac9cc",
+                        "on-secondary-fixed": "#2c0051",
+                        "surface-tint": "#00daf3",
+                        "tertiary": "#e9ecff",
+                        "inverse-on-surface": "#283044",
+                        "on-error": "#690005",
+                        "outline": "#849396",
+                        "secondary-fixed": "#f0dbff",
+                        "secondary": "#ddb7ff",
+                        "on-primary": "#00363d",
+                        "tertiary-container": "#c2cfff",
+                        "error-container": "#93000a",
+                        "primary": "#c3f5ff",
+                        "primary-container": "#00e5ff",
+                        "on-secondary-container": "#d6a9ff",
+                        "on-primary-fixed": "#001f24",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed": "#9cf0ff",
+                        "on-tertiary-fixed-variant": "#003ea8",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#00daf3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #0b1326;
+            color: #dae2fd;
+            overflow-x: hidden;
+        }
+
+        /* High-tech Glassmorphism Utilities */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .glass-card:hover {
+             border-color: rgba(0, 218, 243, 0.3);
+             box-shadow: 0 0 30px rgba(0, 218, 243, 0.1);
+        }
+
+        .neon-text-primary {
+            text-shadow: 0 0 20px rgba(0, 218, 243, 0.5);
+        }
+
+        .neon-text-secondary {
+            text-shadow: 0 0 20px rgba(111, 0, 190, 0.5);
+        }
+
+        .bg-gradient-brand {
+            background: linear-gradient(135deg, #6f00be 0%, #00daf3 100%);
+        }
+
+        /* Ambient Orbs */
+        .ambient-orb {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Custom Checkmark */
+        .custom-check {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background-color: #00daf3;
+            color: #0b1326;
+        }
+
+        /* Toggle Switch */
+        .toggle-checkbox:checked {
+            right: 0;
+            border-color: #00daf3;
+        }
+        .toggle-checkbox:checked + .toggle-label {
+            background-color: #00daf3;
+        }
+    </style>
+</head>
+<body class="antialiased relative min-h-screen flex flex-col font-body-md text-body-md selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background Lighting -->
+<div class="ambient-orb bg-secondary w-[600px] h-[600px] top-[-100px] left-[-200px]"></div>
+<div class="ambient-orb bg-primary-fixed w-[500px] h-[500px] top-[20%] right-[-100px] opacity-30"></div>
+<div class="ambient-orb bg-secondary-container w-[700px] h-[700px] bottom-[-200px] left-[10%] opacity-20"></div>
+<!-- Top Navigation Bar -->
+<nav class="bg-surface/10 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_0_20px_rgba(0,218,243,0.1)] transition-all">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<!-- Brand -->
+<a class="font-headline-md text-headline-md font-extrabold text-primary tracking-tighter flex items-center gap-2" href="index.html">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">graphic_eq</span>
+                F Hasan Production
+</a>
+<!-- Desktop Nav Links -->
+<div class="hidden md:flex items-center gap-8">
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] px-3 py-1 rounded-full" href="index.html">Home</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] px-3 py-1 rounded-full" href="layanan.html">Services</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] px-3 py-1 rounded-full" href="portfolio.html">Portfolio</a>
+<a class="text-primary border-b-2 border-primary pb-1 font-label-md text-label-md" href="harga.html">Pricing</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] px-3 py-1 rounded-full" href="tentang.html">About</a>
+<a class="text-on-surface-variant hover:text-primary transition-colors font-label-md text-label-md hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)] px-3 py-1 rounded-full" href="kontak.html">Contact</a>
+</div>
+<!-- CTA -->
+<a class="hidden md:inline-flex items-center justify-center bg-gradient-to-r from-secondary-container to-primary-container text-white font-label-md text-label-md px-6 py-2.5 rounded-full hover:shadow-[0_0_20px_rgba(0,218,243,0.5)] transition-all scale-95 active:scale-90" href="mailto:cukakamu55@gmail.com?subject=Konsultasi%20Gratis">
+                Konsultasi Gratis
+            </a>
+<!-- Mobile Menu Toggle -->
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined text-3xl">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow pt-[120px] pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto w-full z-10 relative">
+<!-- Header Section -->
+<div class="text-center mb-16 max-w-3xl mx-auto">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-on-background mb-6">
+                Harga Transparan untuk <br/> <span class="text-primary neon-text-primary">Solusi Digital Anda</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                Pilih paket yang sesuai untuk kebutuhan IT support, website, atau produksi kreatif Anda. Tanpa biaya tersembunyi.
+            </p>
+<!-- Billing Toggle -->
+<div class="flex items-center justify-center gap-4">
+<span class="font-label-md text-label-md text-primary transition-colors duration-300" id="monthly-label">Monthly</span>
+<div class="relative inline-block w-14 mr-2 align-middle select-none transition duration-200 ease-in">
+<input class="toggle-checkbox absolute block w-6 h-6 rounded-full bg-white border-4 border-surface appearance-none cursor-pointer z-10 top-1 left-1 transition-all duration-300" id="billing-toggle" name="toggle" type="checkbox"/>
+<label class="toggle-label block overflow-hidden h-8 rounded-full bg-surface-variant cursor-pointer" for="billing-toggle"></label>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant transition-colors duration-300 flex items-center gap-2" id="yearly-label">
+                    Yearly <span class="bg-primary/20 text-primary px-2 py-1 rounded text-xs">Save 20%</span>
+</span>
+</div>
+</div>
+<!-- Pricing Cards (Bento Grid Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mb-24">
+<!-- Basic Tier -->
+<div class="glass-card rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-2">
+<div class="mb-6">
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface rounded-full text-xs font-bold mb-4">BASIC</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Starter</h3>
+<div class="mt-4 flex items-baseline text-on-background">
+<span class="text-3xl font-bold tracking-tight">Rp</span>
+<span class="text-5xl font-extrabold tracking-tight ml-1 price-val" data-monthly="499k" data-yearly="4.7M">499k</span>
+<span class="ml-1 text-xl font-medium text-on-surface-variant price-period">/mo</span>
+</div>
+<p class="mt-4 text-sm text-on-surface-variant">Essential IT support &amp; basic design for individuals.</p>
+</div>
+<ul class="flex-1 space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Basic PC Maintenance</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">1 Logo Design Concept</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Standard OS Install</span>
+</li>
+</ul>
+<a class="w-full py-3 rounded-lg border-2 border-primary-fixed-dim text-primary-fixed-dim font-label-md text-center hover:bg-primary-fixed-dim hover:text-background transition-colors" href="mailto:cukakamu55@gmail.com?subject=Konsultasi%20F%20Hasan%20Production" target="_blank">
+                    Pilih Starter
+                </a>
+</div>
+<!-- Standard Tier (Highlighted) -->
+<div class="glass-card rounded-xl p-8 flex flex-col relative transform md:scale-105 border-primary/50 shadow-[0_0_40px_rgba(0,218,243,0.15)] z-10 transition-all duration-300 hover:-translate-y-2">
+<div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-gradient-brand text-white px-4 py-1 rounded-full text-xs font-bold whitespace-nowrap shadow-[0_0_15px_rgba(111,0,190,0.5)]">
+                    MOST POPULAR
+                </div>
+<div class="mb-6">
+<span class="inline-block px-3 py-1 bg-primary/20 text-primary rounded-full text-xs font-bold mb-4">STANDARD</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Professional</h3>
+<div class="mt-4 flex items-baseline text-on-background">
+<span class="text-3xl font-bold tracking-tight">Rp</span>
+<span class="text-5xl font-extrabold tracking-tight ml-1 price-val text-primary neon-text-primary" data-monthly="1.2M" data-yearly="11.5M">1.2M</span>
+<span class="ml-1 text-xl font-medium text-on-surface-variant price-period">/mo</span>
+</div>
+<p class="mt-4 text-sm text-on-surface-variant">Complete digital presence for growing UMKM.</p>
+</div>
+<ul class="flex-1 space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Landing Page Website</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">3 Social Media Designs</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Remote IT Support (8x5)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Basic SEO Setup</span>
+</li>
+</ul>
+<a class="w-full py-3 rounded-lg bg-gradient-brand text-white font-label-md text-center hover:shadow-[0_0_20px_rgba(0,218,243,0.6)] transition-shadow" href="mailto:cukakamu55@gmail.com?subject=Konsultasi%20F%20Hasan%20Production" target="_blank">
+                    Pilih Professional
+                </a>
+</div>
+<!-- Premium Tier -->
+<div class="glass-card rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-2">
+<div class="mb-6">
+<span class="inline-block px-3 py-1 bg-secondary-container/30 text-secondary-fixed-dim rounded-full text-xs font-bold mb-4">PREMIUM</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Business</h3>
+<div class="mt-4 flex items-baseline text-on-background">
+<span class="text-3xl font-bold tracking-tight">Rp</span>
+<span class="text-5xl font-extrabold tracking-tight ml-1 price-val" data-monthly="3.5M" data-yearly="33.6M">3.5M</span>
+<span class="ml-1 text-xl font-medium text-on-surface-variant price-period">/mo</span>
+</div>
+<p class="mt-4 text-sm text-on-surface-variant">Advanced solutions for established companies.</p>
+</div>
+<ul class="flex-1 space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Company Profile Website</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Full Branding Kit</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">On-site IT Support (2x/mo)</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">1x Live Streaming Setup</span>
+</li>
+</ul>
+<a class="w-full py-3 rounded-lg border-2 border-primary-fixed-dim text-primary-fixed-dim font-label-md text-center hover:bg-primary-fixed-dim hover:text-background transition-colors" href="mailto:cukakamu55@gmail.com?subject=Konsultasi%20F%20Hasan%20Production" target="_blank">
+                    Pilih Business
+                </a>
+</div>
+<!-- Enterprise Tier -->
+<div class="glass-card rounded-xl p-8 flex flex-col transition-all duration-300 hover:-translate-y-2">
+<div class="mb-6">
+<span class="inline-block px-3 py-1 bg-surface-variant text-on-surface rounded-full text-xs font-bold mb-4">ENTERPRISE</span>
+<h3 class="font-headline-md text-headline-md text-on-background">Production</h3>
+<div class="mt-4 flex items-baseline text-on-background">
+<span class="text-3xl font-bold tracking-tight">Custom</span>
+</div>
+<p class="mt-4 text-sm text-on-surface-variant">Tailored multi-camera live streaming &amp; complex IT infrastructure.</p>
+</div>
+<ul class="flex-1 space-y-4 mb-8">
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Multi-Camera Event Live</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Custom Web App Dev</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">24/7 Priority Support</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="custom-check"><span class="material-symbols-outlined text-[16px] font-bold">check</span></span>
+<span class="text-sm text-on-surface">Dedicated Account Manager</span>
+</li>
+</ul>
+<a class="w-full py-3 rounded-lg bg-surface-bright text-on-background font-label-md text-center hover:bg-surface-variant transition-colors" href="mailto:cukakamu55@gmail.com?subject=Konsultasi%20F%20Hasan%20Production" target="_blank">
+                    Hubungi Kami
+                </a>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-12 bg-surface-container-lowest border-t border-white/5 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<div class="col-span-1 md:col-span-1">
+<a class="font-headline-md text-headline-md text-primary neon-text-primary block mb-4" href="#">
+                    F HASAN <br/><span class="text-on-background text-lg">PRODUCTION</span>
+</a>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Solusi Digital, IT Support &amp; Creative Production.</p>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-4 font-bold">Contact</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">call</span> Email: cukakamu55@gmail.com</a></li>
+<li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">mail</span> Email: cukakamu55@gmail.com</a></li>
+<li><a class="hover:text-primary transition-colors flex items-center gap-2" href="#"><span class="material-symbols-outlined text-[18px]">location_on</span> Address: Jl. Contoh Alamat No. 123</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-4 font-bold">Quick Links</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li><a class="hover:text-primary transition-colors underline-offset-4 hover:underline" href="layanan.html">Services</a></li>
+<li><a class="hover:text-primary transition-colors underline-offset-4 hover:underline" href="portfolio.html">Portfolio</a></li>
+<li><a class="text-primary font-bold underline-offset-4 hover:underline" href="harga.html">Pricing</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-label-md text-label-md text-on-background mb-4 font-bold">Hours</h4>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">schedule</span> Mon-Sat 08:00-20:00
+                </p>
+</div>
+</div>
+<div class="mt-12 text-center font-body-md text-body-md text-on-surface-variant/50 border-t border-white/5 pt-6 max-w-container-max-width mx-auto">
+            © 2024 F Hasan Production. All rights reserved.
+        </div>
+</footer>
+<script>
+        // Simple Pricing Toggle Logic
+        const toggle = document.getElementById('billing-toggle');
+        const priceVals = document.querySelectorAll('.price-val');
+        const pricePeriods = document.querySelectorAll('.price-period');
+        const monthlyLabel = document.getElementById('monthly-label');
+        const yearlyLabel = document.getElementById('yearly-label');
+
+        toggle.addEventListener('change', (e) => {
+            const isYearly = e.target.checked;
+            
+            if(isYearly) {
+                monthlyLabel.classList.replace('text-primary', 'text-on-surface-variant');
+                yearlyLabel.classList.replace('text-on-surface-variant', 'text-primary');
+            } else {
+                yearlyLabel.classList.replace('text-primary', 'text-on-surface-variant');
+                monthlyLabel.classList.replace('text-on-surface-variant', 'text-primary');
+            }
+
+            priceVals.forEach(el => {
+                if(el.dataset.monthly) {
+                    // Quick animation effect
+                    el.style.opacity = 0;
+                    setTimeout(() => {
+                        el.textContent = isYearly ? el.dataset.yearly : el.dataset.monthly;
+                        el.style.opacity = 1;
+                    }, 150);
+                }
+            });
+            
+            pricePeriods.forEach(el => {
+                el.style.opacity = 0;
+                setTimeout(() => {
+                    el.textContent = isYearly ? '/yr' : '/mo';
+                    el.style.opacity = 1;
+                }, 150);
+            });
+        });
+    </script>
+<script src="script.js"></script>
+</body></html>

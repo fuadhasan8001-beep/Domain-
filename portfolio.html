@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - F Hasan Production</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-background": "#dae2fd",
+                        "surface": "#0b1326",
+                        "surface-container-lowest": "#060e20",
+                        "secondary-container": "#6f00be",
+                        "surface-variant": "#2d3449",
+                        "on-tertiary-container": "#004ecf",
+                        "surface-container": "#171f33",
+                        "on-secondary": "#490080",
+                        "on-surface": "#dae2fd",
+                        "tertiary-fixed-dim": "#b4c5ff",
+                        "on-tertiary-fixed": "#00174b",
+                        "secondary-fixed-dim": "#ddb7ff",
+                        "outline-variant": "#3b494c",
+                        "on-error-container": "#ffdad6",
+                        "surface-bright": "#31394d",
+                        "on-secondary-fixed-variant": "#6900b3",
+                        "surface-container-high": "#222a3d",
+                        "inverse-primary": "#006875",
+                        "on-tertiary": "#002a78",
+                        "tertiary-fixed": "#dbe1ff",
+                        "surface-dim": "#0b1326",
+                        "background": "#0b1326",
+                        "on-primary-fixed-variant": "#004f58",
+                        "on-primary-container": "#00626e",
+                        "inverse-surface": "#dae2fd",
+                        "on-surface-variant": "#bac9cc",
+                        "on-secondary-fixed": "#2c0051",
+                        "surface-tint": "#00daf3",
+                        "tertiary": "#e9ecff",
+                        "inverse-on-surface": "#283044",
+                        "on-error": "#690005",
+                        "outline": "#849396",
+                        "secondary-fixed": "#f0dbff",
+                        "secondary": "#ddb7ff",
+                        "on-primary": "#00363d",
+                        "tertiary-container": "#c2cfff",
+                        "error-container": "#93000a",
+                        "primary": "#c3f5ff",
+                        "primary-container": "#00e5ff",
+                        "on-secondary-container": "#d6a9ff",
+                        "on-primary-fixed": "#001f24",
+                        "surface-container-highest": "#2d3449",
+                        "surface-container-low": "#131b2e",
+                        "primary-fixed": "#9cf0ff",
+                        "on-tertiary-fixed-variant": "#003ea8",
+                        "error": "#ffb4ab",
+                        "primary-fixed-dim": "#00daf3"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "margin-mobile": "16px",
+                        "container-max-width": "1280px",
+                        "gutter": "24px",
+                        "unit": "4px",
+                        "margin-desktop": "64px"
+                    },
+                    "fontFamily": {
+                        "headline-lg-mobile": ["Plus Jakarta Sans"],
+                        "display-lg": ["Plus Jakarta Sans"],
+                        "headline-lg": ["Plus Jakarta Sans"],
+                        "body-md": ["Plus Jakarta Sans"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "headline-md": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "headline-lg-mobile": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "display-lg": ["72px", { "lineHeight": "80px", "letterSpacing": "-0.02em", "fontWeight": "800" }],
+                        "headline-lg": ["40px", { "lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }],
+                        "label-md": ["14px", { "lineHeight": "20px", "fontWeight": "600" }],
+                        "body-lg": ["18px", { "lineHeight": "28px", "fontWeight": "500" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        
+        /* Glassmorphism & Neon Utilities */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow-primary {
+            box-shadow: 0 0 20px rgba(0, 218, 243, 0.3);
+        }
+        .neon-glow-secondary {
+            box-shadow: 0 0 20px rgba(111, 0, 190, 0.3);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(90deg, #ddb7ff 0%, #00daf3 100%);
+        }
+        .btn-primary {
+            background: linear-gradient(90deg, #6f00be 0%, #006875 100%);
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            box-shadow: 0 0 15px rgba(0, 218, 243, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Ambient Background Blobs */
+        .ambient-blob {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(120px);
+            opacity: 0.4;
+            z-index: -1;
+            pointer-events: none;
+        }
+        .blob-1 { top: -10%; left: -5%; width: 50vw; height: 50vw; background: #6f00be; }
+        .blob-2 { bottom: -10%; right: -5%; width: 60vw; height: 60vw; background: #006875; }
+        .blob-3 { top: 40%; left: 30%; width: 40vw; height: 40vw; background: #004ecf; opacity: 0.2; }
+
+        /* Masonry Grid CSS for Portfolio */
+        .masonry-grid {
+            column-count: 1;
+            column-gap: 24px;
+        }
+        @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+        @media (min-width: 1024px) { .masonry-grid { column-count: 3; } }
+        
+        .masonry-item {
+            break-inside: avoid;
+            margin-bottom: 24px;
+        }
+        
+        /* Portfolio Item Hover */
+        .portfolio-overlay {
+            background: linear-gradient(to top, rgba(11, 19, 38, 0.9) 0%, rgba(11, 19, 38, 0.2) 50%, transparent 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .masonry-item:hover .portfolio-overlay { opacity: 1; }
+        .masonry-item:hover img { transform: scale(1.05); }
+
+        /* Before/After Slider */
+        .ba-slider { position: relative; overflow: hidden; }
+        .ba-slider img { display: block; width: 100%; object-fit: cover; }
+        .ba-after { position: absolute; top: 0; left: 0; width: 50%; height: 100%; overflow: hidden; border-right: 2px solid #00daf3; z-index: 10; }
+        .ba-handle {
+            position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+            width: 40px; height: 40px; background: #00daf3; border-radius: 50%;
+            display: flex; align-items: center; justify-content: center; cursor: ew-resize;
+            box-shadow: 0 0 10px rgba(0,218,243,0.5); z-index: 20;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen relative overflow-x-hidden selection:bg-primary-container selection:text-on-primary-container">
+<!-- Ambient Background -->
+<div class="ambient-blob blob-1"></div>
+<div class="ambient-blob blob-2"></div>
+<div class="ambient-blob blob-3"></div>
+<!-- TopNavBar -->
+<nav class="bg-surface/10 backdrop-blur-xl fixed top-0 w-full z-50 border-b border-white/10 shadow-[0_0_20px_rgba(0,218,243,0.1)]">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max-width mx-auto">
+<div class="font-headline-md text-headline-md font-extrabold text-primary tracking-tighter">
+                F Hasan Production
+            </div>
+<!-- Desktop Nav -->
+<ul class="hidden md:flex space-x-8 items-center">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="index.html">Home</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="layanan.html">Services</a></li>
+<li><a class="text-primary border-b-2 border-primary pb-1 font-body-lg text-body-lg" href="portfolio.html">Portfolio</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="harga.html">Pricing</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="tentang.html">About</a></li>
+<li><a class="text-on-surface-variant hover:text-primary transition-colors font-body-lg text-body-lg" href="kontak.html">Contact</a></li>
+</ul>
+<button class="hidden md:block btn-primary px-6 py-2 rounded-full font-label-md text-label-md scale-95 active:scale-90 transition-transform hover:bg-primary/10 hover:shadow-[0_0_15px_rgba(0,218,243,0.3)]">
+                Konsultasi Gratis
+            </button>
+<!-- Mobile Menu Toggle (Visual Only) -->
+<button class="md:hidden text-primary p-2">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="pt-32 pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<!-- Header Section -->
+<header class="text-center mb-16">
+<h1 class="font-display-lg text-display-lg text-gradient mb-6">Our Latest Work</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                Explore our portfolio of cutting-edge digital solutions, creative designs, and high-performance IT setups designed for the modern era.
+            </p>
+</header>
+<!-- Portfolio Filters -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="px-6 py-2 rounded-full glass-card border-primary text-primary neon-glow-primary font-label-md text-label-md">All Works</button>
+<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors font-label-md text-label-md">Website Development</button>
+<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors font-label-md text-label-md">Creative Design</button>
+<button class="px-6 py-2 rounded-full glass-card text-on-surface-variant hover:text-primary hover:border-primary/50 transition-colors font-label-md text-label-md">Live Streaming</button>
+</div>
+<!-- Masonry Portfolio Grid -->
+<div class="masonry-grid">
+<!-- Item 1 (Web) -->
+<div class="masonry-item relative rounded-2xl overflow-hidden glass-card group cursor-pointer">
+<img alt="E-Commerce Website" class="w-full h-auto object-cover transition-transform duration-500" data-alt="A sleek, modern e-commerce website interface displayed on a high-end laptop. The design features a dark mode aesthetic with vibrant neon cyan and purple accents, high-quality product imagery, and glassmorphism UI elements. The lighting is dramatic, emphasizing the digital, high-tech feel of the web development project." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBw-TUwflW9nogJIv2xAXa4aAa3GOVX_f6cFif7dAN_1qYv-T_FyK7wWb2AJFZe5p5edwzXTrZ5h0d3CRrSx6r85QiVqbgYOfdm-TgR-zzPRjacgmQUkjPkavSUD0Okj3l3ywGnlBiKvcoMBeRNqLZcVO0OzIwxBK9mlSDl-GUJ4AwbQB8za1Ku0sxZMYjyudwt0Mi3J3ksBL1n-7rUhXLuUY1JK2PAk01Bli3kxPizo7HOmSepre2s-A"/>
+<div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+<span class="inline-block bg-primary/20 text-primary border border-primary/30 rounded-full px-3 py-1 text-xs font-bold w-max mb-2">Website</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">TechGear E-Commerce</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Full-stack development with React &amp; Node.js</p>
+</div>
+</div>
+<!-- Item 2 (Logo) -->
+<div class="masonry-item relative rounded-2xl overflow-hidden glass-card group cursor-pointer">
+<img alt="Esports Logo" class="w-full h-auto object-cover transition-transform duration-500" data-alt="A highly stylized, futuristic logo design for an esports team. The logo features a fierce, stylized cybernetic wolf head in neon purple and cyan on a dark, textured obsidian background. The presentation is dynamic, with subtle glowing rim lights highlighting the sharp, aggressive angles of the vector art." src="https://lh3.googleusercontent.com/aida-public/AB6AXuASC7YtaYNrAsQYxVPJ0oym-NDwZP3E5nGatoCrQiBESL1empLnaBG1Wkij9KZH_FvzKZ8HGpPOl0uf6L_2XJsatBuUfyU-2Pzq6AMibiZKb4qMCX2re7nI9qr_tR6yUK85SlQxdwY_BdrKdxMAbsPPV7YR5-rXkKTtWS4B8pqyy7iKIUpyHUQB7Rc_zu7JFvc5hhPqDC-srpJAEGLEIurasg-HU-Ru1c-068l1ingwX1OzsJXEjwkAag"/>
+<div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+<span class="inline-block bg-secondary/20 text-secondary border border-secondary/30 rounded-full px-3 py-1 text-xs font-bold w-max mb-2">Creative Design</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">CyberWolf Esports</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Brand identity &amp; logo design</p>
+</div>
+</div>
+<!-- Item 3 (Streaming) -->
+<div class="masonry-item relative rounded-2xl overflow-hidden glass-card group cursor-pointer">
+<img alt="Live Streaming Setup" class="w-full h-auto object-cover transition-transform duration-500" data-alt="A professional live streaming control room setup during a high-stakes esports tournament. Multiple glowing monitors display game feeds, OBS interfaces, and vMix software. A complex audio mixer with illuminated faders sits in the foreground. The room is bathed in atmospheric blue and purple LED lighting, conveying a high-tech broadcast environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2lvLS6vVPlMv-dV8cwUrrMmawUAgpECdMOdwzxEfygvbj2bDDBU38qHk_l5HGBpmjwLpmAF-0FCQRE8hCXyy7NS3j7EH-zxZP481RwdiRWeNo_gOy_pZ1bC1XsgTxrBpV04RjjYAcl3D9_botnJoKV2aQNWFrUzqkMT1iMgyxatB-oqbyJ5JtwP7BRnqUn1oqpl1-3Tc7EfkX63_zVwEsbHbHRY7c3bjfYTFp9XCEfEuu8z5Yw66-1w"/>
+<div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+<span class="inline-block bg-tertiary-fixed-dim/20 text-tertiary-fixed-dim border border-tertiary-fixed-dim/30 rounded-full px-3 py-1 text-xs font-bold w-max mb-2">Live Streaming</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Global Gaming Tournament</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Multi-camera hybrid event production</p>
+</div>
+</div>
+<!-- Item 4 (Web) -->
+<div class="masonry-item relative rounded-2xl overflow-hidden glass-card group cursor-pointer">
+<img alt="Corporate Landing Page" class="w-full h-auto object-cover transition-transform duration-500" data-alt="A professional corporate landing page for a high-tech cybersecurity firm displayed on a curved ultrawide monitor. The UI utilizes deep navy blues, bright cyan data visualizations, and glassmorphic card overlays. The scene is shot from a slight angle in a dark room with subtle purple ambient lighting, highlighting the modern web design." src="https://lh3.googleusercontent.com/aida-public/AB6AXuABojFcuZcUIVeq4ICCTVReaU3iJHl7MiOCLAowOOhmZOpU3ZqmaiJjrbeEOi5HeVsNGlQdegFuZs3MSK7GAsU2kAb1WZret6iPQlV3y_e2aJGdD1jKv5zSXxON19FiC5kVjh1hXU975D0OwMKqASEF3OJm6HICWdGvwfrfanssHOBLI7gqeYPCnsz7uS_xh10VQZtvJeOEUm2fheLCsDx6p_qehgT2CmeIegv_SPR434Py1ZCfFK5QZw"/>
+<div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+<span class="inline-block bg-primary/20 text-primary border border-primary/30 rounded-full px-3 py-1 text-xs font-bold w-max mb-2">Website</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Nexus Security</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Responsive landing page UI/UX</p>
+</div>
+</div>
+<!-- Item 5 (Design) -->
+<div class="masonry-item relative rounded-2xl overflow-hidden glass-card group cursor-pointer">
+<img alt="Social Media Design" class="w-full h-auto object-cover transition-transform duration-500" data-alt="A collection of dynamic social media feed designs arranged in an isometric 3D mockup. The Instagram posts feature vibrant, high-contrast graphics with neon gradients, bold typography, and cyberpunk aesthetics. The dark background emphasizes the vivid colors of the promotional materials for a digital marketing campaign." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLbDA6PoNDghimwQr8CXKz-5G7n6mKzOy6oVLjRsgrHMtEuCqeCzTsS1EKDyC-V_sBz5kf249xgleyakGvHYi26zJRN9v-lerVoYguTSpWQVLoxkGQIU4JCnwhQ3dPFHCKwbQr-YbHmhf9n5KXifRegbiywnedAitcqzE7XLbhpMOHAiuNSm_rcyuann6GWs34Kh9XOFiddeSYnl8KYtReglZIDLQ_eCEMjpXUHzVbRXtvw8QUUqMIJQ"/>
+<div class="absolute inset-0 portfolio-overlay flex flex-col justify-end p-6">
+<span class="inline-block bg-secondary/20 text-secondary border border-secondary/30 rounded-full px-3 py-1 text-xs font-bold w-max mb-2">Creative Design</span>
+<h3 class="font-headline-md text-headline-md text-white mb-1">Synthwave Promo Campaign</h3>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">Instagram feed &amp; story templates</p>
+</div>
+</div>
+</div>
+<!-- Hardware Optimization (Before/After) Section -->
+<section class="mt-32">
+<div class="glass-card rounded-3xl p-8 md:p-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -z-10"></div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div>
+<span class="text-primary font-bold tracking-widest uppercase text-sm mb-2 block">Computer Service</span>
+<h2 class="font-headline-lg text-headline-lg text-white mb-6">Hardware Optimization &amp; Revival</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">
+                            We don't just fix computers; we upgrade them for the modern workflow. See the difference our SSD upgrades, RAM expansions, and professional cable management make in this workstation overhaul.
+                        </p>
+<ul class="space-y-3 mb-8">
+<li class="flex items-center text-on-surface">
+<span class="material-symbols-outlined text-primary mr-3" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Complete physical cleaning &amp; thermal paste replacement
+                            </li>
+<li class="flex items-center text-on-surface">
+<span class="material-symbols-outlined text-primary mr-3" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                HDD to NVMe SSD Migration
+                            </li>
+<li class="flex items-center text-on-surface">
+<span class="material-symbols-outlined text-primary mr-3" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Professional cable routing for optimal airflow
+                            </li>
+</ul>
+<button class="btn-primary px-8 py-3 rounded-full font-label-md text-label-md flex items-center w-max">
+                            Book an Upgrade
+                            <span class="material-symbols-outlined ml-2">arrow_forward</span>
+</button>
+</div>
+<!-- Before/After Slider Component -->
+<div class="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-[0_0_30px_rgba(0,218,243,0.15)] ba-slider" id="hardwareSlider">
+<!-- 'Before' Image (Background) -->
+<img alt="Before Optimization" class="absolute inset-0 w-full h-full object-cover" data-alt="A dirty, unorganized computer interior. The motherboard is dusty, cables are a messy 'rat's nest' obstructing airflow, and an old, slow mechanical hard drive is visible. The lighting is dim and unflattering, emphasizing the neglected state of the PC hardware before servicing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCmCKQ06GmZf1vQInq7jHvmSj_3z7NzO_ROhLsSa-WPj96Ae-Ge6JkI9cdaIFOBLFoJjmZfviTAsfq-Bfpf-15y_Ds5WqILvnl-mkjlXdoEZlnQqh6T0R5_TkYdSO8QT3XFCLjvO1f5fl-7gPkMkN5686CHESQmwvTwl5AlA323vcXAEkm87YiE0c1elOUjICYRb5EiS9Hwr6WJijVco8ucnv3rNiSdX9WAHACTdFdQ10JRefbwgzlI7g"/>
+<!-- 'After' Image (Clipped overlay) -->
+<div class="ba-after absolute top-0 left-0 h-full w-1/2 overflow-hidden border-r-2 border-primary" id="baAfterImage">
+<img alt="After Optimization" class="absolute top-0 left-0 w-[200%] max-w-none h-full object-cover" data-alt="A pristine, highly optimized computer interior. Dust-free components, immaculately routed cables with custom sleeves, a blazing fast NVMe SSD installed, and vibrant RGB lighting glowing in vivid neon cyan and purple. The setup looks brand new, powerful, and meticulously maintained after professional servicing." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGe-JODGUUsTiIvaP9zHuPylThA53P48lZ3TaKFQ7P0VJ66mXIM15ocgQXs2_9uVKL3PwQfZy1gyHBx4dMxKpL_ltsZfMrIUbLq6XiXjJrQtDDCVmgqUb7siTVhskJmYUPZVrItahq1gvdN4wpn_9roJdCPwIrzmpNoMkqDfgL0alwuIu-GuMumDwZ2MN6CotJZqnd_GxDuF393y0XhzenGRlS6OE7psWq1Lmi4ICjkpY_07B2gcozbQ" style="width: 200%;"/>
+</div>
+<!-- Slider Handle -->
+<div class="ba-handle absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-10 h-10 bg-surface border-2 border-primary rounded-full flex items-center justify-center cursor-ew-resize z-20 shadow-[0_0_15px_rgba(0,218,243,0.5)]" id="baHandle">
+<span class="material-symbols-outlined text-primary text-sm">code</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest w-full py-12 border-t border-white/5 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-gutter px-margin-mobile md:px-margin-desktop max-w-container-max-width mx-auto">
+<!-- Brand Column -->
+<div class="col-span-1 md:col-span-1">
+<div class="font-headline-md text-headline-md text-primary mb-4">
+                    F Hasan Production
+                </div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">
+                    Solusi Digital, IT Support &amp; Creative Production. Semua kebutuhan digital Anda dalam satu tempat.
+                </p>
+</div>
+<!-- Links -->
+<div class="col-span-1">
+<h4 class="font-bold text-on-surface mb-4">Quick Links</h4>
+<ul class="space-y-2 font-body-md text-body-md">
+<li><a class="text-on-surface-variant hover:text-primary transition-colors underline-offset-4 hover:underline" href="layanan.html">Services</a></li>
+<li><a class="text-primary font-bold underline-offset-4 hover:underline" href="portfolio.html">Portfolio</a></li>
+</ul>
+</div>
+<!-- Contact -->
+<div class="col-span-1 md:col-span-2">
+<h4 class="font-bold text-on-surface mb-4">Contact Us</h4>
+<ul class="space-y-2 font-body-md text-body-md text-on-surface-variant">
+<li class="flex items-center"><span class="material-symbols-outlined mr-2 text-primary text-sm">chat</span> Email: cukakamu55@gmail.com</li>
+<li class="flex items-center"><span class="material-symbols-outlined mr-2 text-primary text-sm">mail</span> Email: cukakamu55@gmail.com</li>
+<li class="flex items-center"><span class="material-symbols-outlined mr-2 text-primary text-sm">location_on</span> Address: Jl. Contoh Alamat No. 123</li>
+<li class="flex items-center"><span class="material-symbols-outlined mr-2 text-primary text-sm">schedule</span> Hours: Mon-Sat 08:00-20:00</li>
+</ul>
+</div>
+<!-- Copyright -->
+<div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-white/5 text-center font-body-md text-body-md text-on-surface-variant">
+                © 2024 F Hasan Production. All rights reserved.
+            </div>
+</div>
+</footer>
+<!-- Simple Script for Before/After Slider -->
+<script>
+        const slider = document.getElementById('hardwareSlider');
+        const afterImg = document.getElementById('baAfterImage');
+        const handle = document.getElementById('baHandle');
+        const afterImgContent = afterImg.querySelector('img');
+        
+        let isDown = false;
+
+        slider.addEventListener('mousedown', (e) => { isDown = true; });
+        slider.addEventListener('mouseup', () => { isDown = false; });
+        slider.addEventListener('mouseleave', () => { isDown = false; });
+
+        slider.addEventListener('mousemove', (e) => {
+            if (!isDown) return;
+            e.preventDefault();
+            const rect = slider.getBoundingClientRect();
+            let x = e.clientX - rect.left;
+            // Constrain
+            if (x < 0) x = 0;
+            if (x > rect.width) x = rect.width;
+            
+            const percent = (x / rect.width) * 100;
+            afterImg.style.width = `${percent}%`;
+            handle.style.left = `${percent}%`;
+        });
+
+        // Touch support
+        slider.addEventListener('touchstart', (e) => { isDown = true; });
+        slider.addEventListener('touchend', () => { isDown = false; });
+        slider.addEventListener('touchmove', (e) => {
+            if (!isDown) return;
+            const rect = slider.getBoundingClientRect();
+            let x = e.touches[0].clientX - rect.left;
+            if (x < 0) x = 0;
+            if (x > rect.width) x = rect.width;
+            
+            const percent = (x / rect.width) * 100;
+            afterImg.style.width = `${percent}%`;
+            handle.style.left = `${percent}%`;
+        });
+
+        // Keep the inner image sized relative to the parent container, not the clipping div
+        function resizeImages() {
+             afterImgContent.style.width = `${slider.offsetWidth}px`;
+        }
+        window.addEventListener('resize', resizeImages);
+        resizeImages();
+
+    </script>
+<script src="script.js"></script>
+</body></html>
